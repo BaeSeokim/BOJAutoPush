@@ -1,13 +1,6 @@
-n = input()
-empty = []
+word = input()
 
-for i in range(len(n)):
-    if n[i] == n[len(n)-i-1]:
-        continue
-    else :
-        empty.append(0)
-        
-if not empty :
+if word == word[::-1]:
     print(1)
-else : 
+else :
     print(0)
