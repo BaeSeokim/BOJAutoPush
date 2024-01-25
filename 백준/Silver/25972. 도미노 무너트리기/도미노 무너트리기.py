@@ -11,7 +11,6 @@ count = 0
 for i in range(n-1):
     if domi[i][0]+domi[i][1] < domi[i+1][0]:
         count += 1 
-    else:
-        continue
+
 print(count+1)
 
