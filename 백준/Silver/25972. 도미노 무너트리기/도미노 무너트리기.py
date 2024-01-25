@@ -1,15 +1,17 @@
 import sys
 input = sys.stdin.readline
-
-N = int(input())
-# domino = [list(map(int,input().split())) for i in range(N)]
-domino = sorted([list(map(int,input().split())) for i in range(N)], key = lambda x:x[0])
+n = int(input())
+domi = []
+for i in range(n):
+    x, y = map(int, input().split())
+    domi.append((x, y))
+domi.sort()
 count = 0
-    
-for i in range(N-1):
-    if domino[i][0]+domino[i][1] < domino[i+1][0]:
-        count += 1
+
+for i in range(n-1):
+    if domi[i][0]+domi[i][1] < domi[i+1][0]:
+        count += 1 
     else:
         continue
-    
 print(count+1)
+
